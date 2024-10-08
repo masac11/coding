@@ -16,7 +16,7 @@ public class MergeSort {
         int len = nums.length;
         for (int gap = 1; gap < len; gap *= 2) {
             for (int l = 0; l < len - gap; l += 2 * gap) {
-                int r = Math.min(len, l + 2 * gap - 1);
+                int r = Math.min(len - 1, l + 2 * gap - 1);
                 merge(nums, tmpArr, l, l + gap - 1, r);
             }
         }
